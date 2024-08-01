@@ -1,0 +1,6 @@
+[submodule "SimpleEduBackend"]
+	path = SimpleEduBackend
+	url = https://github.com/imdong/simple-edu-backend
+[submodule "SimpleEduSystem"]
+	path = SimpleEduSystem
+	url = git@github.com:imdong/simple-edu-system.git
