@@ -1,0 +1,78 @@
+networks:
+  default:
+
+volumes:
+  pgdata:
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./logs/nginx:/var/log/nginx/:rw
+      - ./conf/vhost/nginx:/etc/nginx/conf.d/:rw
+      - ./:/www:ro
+    restart: always
+    networks:
+      - default
+    environment:
+      TZ: "${TZ}"
+
+  postgres:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    restart: always
+    networks:
+      - default
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  php73:
+    image: local-build/php:73-fpm-alpine
+    build:
+      context: ./build
+      dockerfile: ./php.Dockerfile
+      args:
+        PHP_VERSION: 7.3
+        PHP_EXTENSIONS: ${PHP73_EXTENSIONS}
+        ALPINE_REPOSITORIES: ${ALPINE_REPOSITORIES}
+        TZ: "${TZ}"
+    volumes:
+      - ./logs/php73:/var/log/php
+      - ./SimpleEduBackend:/www/SimpleEduBackend:rw
+    restart: always
+    working_dir: /www/SimpleEduBackend
+    networks:
+      - default
+
+  php82:
+    image: local-build/php:82-fpm-alpine
+    build:
+      context: ./build
+      dockerfile: ./php.Dockerfile
+      args:
+        PHP_VERSION: 8.2
+        PHP_EXTENSIONS: ${PHP82_EXTENSIONS}
+        ALPINE_REPOSITORIES: ${ALPINE_REPOSITORIES}
+        TZ: "${TZ}"
+    volumes:
+      - ./logs/php82:/var/log/php
+      - ./SimpleEduSystem:/www/SimpleEduSystem:rw
+    restart: always
+    working_dir: /www/SimpleEduSystem
+    networks:
+      - default
+
+  nodejs:
+    image: node:alpine
+    ports:
+      - 5173:5173
+    volumes:
+      - ./SimpleEduSystem:/www/SimpleEduSystem:rw
+    restart: unless-stopped
+    working_dir: /www/SimpleEduSystem
+    command: ["npm", "run", "dev"]
+    networks:
+      - default
