@@ -20,9 +20,9 @@
 
 托管于 [Heroku](https://www.heroku.com/)
 
-- 管理员后台: 
+- 管理员后台
   - [https://simple-edu-backend.895460.xyz/admin/](https://simple-edu-backend.895460.xyz/admin/)
-  - [https://simple-edu-backend-9d8eb648af1d.herokuapp.com/](https://simple-edu-backend-9d8eb648af1d.herokuapp.com/)
+  - [https://simple-edu-backend-9d8eb648af1d.herokuapp.com/admin/](https://simple-edu-backend-9d8eb648af1d.herokuapp.com/admin/)
 - 用户后台:
   - [https://simple-edu-system.895460.xyz/](https://simple-edu-system.895460.xyz/)
   - [https://simple-edu-system-c79c42c542b8.herokuapp.com/](https://simple-edu-system-c79c42c542b8.herokuapp.com/)
