@@ -23,6 +23,7 @@ services:
     image: postgres:alpine
     environment:
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: simple_edu
     restart: always
     networks:
       - default
@@ -41,6 +42,7 @@ services:
         TZ: "${TZ}"
     volumes:
       - ./logs/php73:/var/log/php
+      - ./data/composer:/usr/local/composer
       - ./SimpleEduBackend:/www/SimpleEduBackend:rw
     restart: always
     working_dir: /www/SimpleEduBackend
@@ -59,6 +61,7 @@ services:
         TZ: "${TZ}"
     volumes:
       - ./logs/php82:/var/log/php
+      - ./data/composer:/usr/local/composer
       - ./SimpleEduSystem:/www/SimpleEduSystem:rw
     restart: always
     working_dir: /www/SimpleEduSystem
@@ -70,6 +73,7 @@ services:
     ports:
       - 5173:5173
     volumes:
+      - ./data/node:/root/.npm:rw
       - ./SimpleEduSystem:/www/SimpleEduSystem:rw
     restart: unless-stopped
     working_dir: /www/SimpleEduSystem
