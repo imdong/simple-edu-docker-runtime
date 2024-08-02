@@ -6,10 +6,17 @@
 
 在目录中执行 `docker compsoe up -d` 即可启动容器与服务。
 
-本地开发默认访问地址:
+## 子仓库地址
+
+管理员后台: [imdong/simple-edu-system](https://github.com/imdong/simple-edu-system)  
+用户后台: [imdong/simple-edu-backend](https://github.com/imdong/simple-edu-backend)
+
+## 本地开发默认访问地址
 
 - 管理员后台: `http://backend.simple-edu.local/admin/`
 - 用户后台: `http://frontend.simple-edu.local/`
+
+## 接口文档
 
 用户后台相关的 API 文件托管于 Postman，接口文档在线预览地址  
 [https://documenter.getpostman.com/view/24712719/2sA3rwKtUP](https://documenter.getpostman.com/view/24712719/2sA3rwKtUP)
@@ -19,7 +26,7 @@
 
 支付系统接入为 [Omise](https://www.omise.co/)
 
-演示环境帐号密码
+## 演示环境帐号密码
 
 管理员后台帐号: `admin`  
 管理员后台密码: `admin`
