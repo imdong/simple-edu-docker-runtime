@@ -13,8 +13,19 @@
 
 ## 本地开发默认访问地址
 
-- 管理员后台: `http://backend.simple-edu.local/admin/`
-- 用户后台: `http://frontend.simple-edu.local/`
+- 管理员后台: [http://backend.simple-edu.local/admin/](http://backend.simple-edu.local/admin/)
+- 用户后台: [http://frontend.simple-edu.local/](http://frontend.simple-edu.local/)
+
+## 线上预览地址
+
+托管于 [Heroku](https://www.heroku.com/)
+
+- 管理员后台: 
+  - [https://simple-edu-backend.895460.xyz/admin/](https://simple-edu-backend.895460.xyz/admin/)
+  - [https://simple-edu-backend-9d8eb648af1d.herokuapp.com/](https://simple-edu-backend-9d8eb648af1d.herokuapp.com/)
+- 用户后台:
+  - [https://simple-edu-system.895460.xyz/](https://simple-edu-system.895460.xyz/)
+  - [https://simple-edu-system-c79c42c542b8.herokuapp.com/](https://simple-edu-system-c79c42c542b8.herokuapp.com/)
 
 ## 接口文档
 
