@@ -8,8 +8,8 @@
 
 ## 子仓库地址
 
-管理员后台: [imdong/simple-edu-system](https://github.com/imdong/simple-edu-system)  
-用户后台: [imdong/simple-edu-backend](https://github.com/imdong/simple-edu-backend)
+- 管理员后台: [imdong/simple-edu-backend](https://github.com/imdong/simple-edu-backend)
+- 用户后台: [imdong/simple-edu-system](https://github.com/imdong/simple-edu-system)
 
 ## 本地开发默认访问地址
 
